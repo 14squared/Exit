@@ -113,7 +113,8 @@ void loop() {
    sweepmiddle();
    strip.setPixelColor(35, 0, 0, 0);
    strip.setPixelColor(36, 0, 0, 0);
-   if (distsensor < 100){
+   if (distsensor < 50){
+    playcomplete("robot1.wav");
     strip.setPixelColor(35, 255, 0, 0);
     strip.setPixelColor(36, 255, 0, 0);
     colorWipe(strip.Color(255, 0, 0, 255), 100); // Green
@@ -125,6 +126,7 @@ void loop() {
     colorWipe(strip.Color(0, 155, 0, 0), 100); // Green
    }
    else if (distsensor > 300){
+    playcomplete("robot3.wav");
     strip.setPixelColor(35, 0, 255, 0);
     strip.setPixelColor(36, 0, 255, 0);
     colorWipe(strip.Color(0, 155, 0, 0), 100); // Green
